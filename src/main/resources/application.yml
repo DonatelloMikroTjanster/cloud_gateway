@@ -10,13 +10,13 @@ cloud:
         uri: lb://Wigelsstravels
         predicates:
           - Path=/api/v2/**
-
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: https://eurekatravel.azurewebsites.net/eureka/
+
 logging:
   level:
     root: INFO
