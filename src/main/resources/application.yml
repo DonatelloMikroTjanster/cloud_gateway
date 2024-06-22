@@ -11,21 +11,6 @@ cloud:
         predicates:
           - Path=/api/v2/**
 
-#      - id: Wigelsstravels
-#        uri: lb://Wigelsstravels
-#        predicates:
-#          - Path=/api/v2/**
-#
-#      - id: Wigelsstravels
-#        uri: lb://Wigelsstravels
-#        predicates:
-#          - Path=/api/v2/**
-#
-#      - id: Wigelsstravels
-#        uri: lb://Wigelsstravels
-#        predicates:
-#          - Path=/api/v2/**
-
 eureka:
   client:
     register-with-eureka: true
