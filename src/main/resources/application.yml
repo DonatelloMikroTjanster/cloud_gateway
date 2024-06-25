@@ -7,8 +7,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: Wigelsstravels
-          uri: lb://Wigelsstravels
+        - id: Wigellstravel
+          uri: lb://Wigellstravel
           predicates:
             - Path=/api/v2/**
 eureka:
