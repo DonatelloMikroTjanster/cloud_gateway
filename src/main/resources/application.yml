@@ -22,5 +22,5 @@ logging:
   level:
     root: INFO
     org.springframework.cloud.gateway: DEBUG
-    se.salts.Wigellstravels.services: INFO
+    se.salts.Wigellstravel.services: INFO
 
