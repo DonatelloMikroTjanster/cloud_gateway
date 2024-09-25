@@ -1,5 +1,8 @@
+Here is the updated `application.yml` file with the corrected paths and configurations:
+
+  ```yaml
 server:
-  port: 8080
+  port: 8586
 spring:
   application:
     name: cloud-gateway
@@ -7,20 +10,43 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: Wigellstravel
-          uri: lb://Wigellstravel
+        - id: RecommendationsService
+          uri: lb://RecommendationsService
           predicates:
-            - Path=/api/v2/**
+            - Path=/api/recommendations/**
+        - id: PlaybackHistoryService
+          uri: lb://PlaybackHistoryService
+          predicates:
+            - Path=/playback-history/**
+        - id: MediaService
+          uri: lb://media-service
+          predicates:
+            - Path=/api/media/**
+        - id: DonatelloUserService
+          uri: lb://DonatelloUserService
+          predicates:
+            - Path=/users/**
+        - id: ArtistService
+          uri: lb://ArtistService
+          predicates:
+            - Path=/artist/**
+        - id: SearchFunctionService
+          uri: lb://SearchFunctionService
+          predicates:
+            - Path=/api/search/**
+        - id: TopMediaService
+          uri: lb://top-media-service
+          predicates:
+            - Path=/topmedia/**
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: https://eurekatravel.azurewebsites.net/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 logging:
   level:
     root: INFO
     org.springframework.cloud.gateway: DEBUG
-    se.salts.Wigellstravel.services: INFO
-
+    com.edufy: INFO
