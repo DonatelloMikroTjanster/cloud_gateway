@@ -36,6 +36,17 @@ spring:
           uri: lb://top-media-service
           predicates:
             - Path=/topmedia/**
+        - id: AlbumService
+          uri: lb://AlbumService
+          predicates:
+            - Path=/albums/**
+            - Path=/tracks/**
+        - id: AlbumForArtist
+          uri: lb://AlbumForArtist
+          predicates:
+            - Path=/artist/**
+
+
 eureka:
   client:
     register-with-eureka: true
